@@ -1,6 +1,6 @@
 # match-parser
 
-A collection of scripts to gather and analyse Dota 2 match data from matches played in a given FACEIT hub. Implemented with Python and pandas. The API keys and directories in `constants.py` need to be provided by the user.
+A collection of scripts to gather and analyse Dota 2 match data from matches played in a given FACEIT hub. **Implemented with Python and pandas**. The API keys and directories in `constants.py` need to be provided by the user.
 
 It is important to note that these scripts could be tied together and ran with one command instead of running the necessary scripts separately; however, they are split since it makes them easier to run in small chunks, as the runtime can be rather long due to API rate limits. Personal ease of use was preferred, as these scripts are not going to receive wide-spread usage and these are just here to demonstrate my Python and pandas skills.
 
