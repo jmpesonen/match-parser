@@ -17,7 +17,7 @@ if r.status_code != 200:
 hero_constants = r.json()
 
 # This has the names for all of the downloaded match replay files.
-match_files = os.listdir(f"{constants.MATCH_DIRECTORY}")
+match_files = os.listdir(constants.MATCH_DIRECTORY)
 
 # Represented by integer bitmasks, keep count by splitting binary representation to digits.
 # Even though they are represented by 8-bit and 16-bit binaries, respectively only 6 and 11 of
@@ -185,10 +185,7 @@ pb_df["banned_winrate"] = np.where(
 )
 
 # This is a rather large print so save the pick/ban DF to a different file for easier distribution
-# pb_df.to_csv("picks_and_bans.txt", sep="\t", index=False)
-pb_output = (
-    pb_df.drop(columns=["hero_id"]).sort_values(by="hero_name").to_string(index=False)
-)
+pb_output = pb_df.drop(columns=["hero_id"]).sort_values(by="hero_name").to_string(index=False)
 
 with open(f"{constants.LOG_DIRECTORY}/picks_and_bans.txt", "w") as f:
     f.write(pb_output)
