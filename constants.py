@@ -1,8 +1,8 @@
 APP_API_KEY = ""
 PERSONAL_API_KEY = ""
 HUB_ID = ""
-MATCH_DIRECTORY = "./matches"
-LOG_DIRECTORY = "./logs"
+MATCH_DIRECTORY = "./matches/seasonX"
+LOG_DIRECTORY = "./logs/seasonX"
 
 PLAYER_KEYS = [
     "account_id",
